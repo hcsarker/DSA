@@ -85,9 +85,47 @@ OR referee_id IS NULL;
 
 ***
 
-## 6️⃣&#x20;
+## 6️⃣  Daily Active Users (Last 30 Days)
+
+### 📝 Question
+
+**Table: Activity**
+
+| Column Name    | Type |
+| -------------- | ---- |
+| user\_id       | int  |
+| session\_id    | int  |
+| activity\_date | date |
+| activity\_type | enum |
+
+* This table **may contain duplicate rows**.
+* `activity_type` is ENUM:
+  * `'open_session'`
+  * `'end_session'`
+  * `'scroll_down'`
+  * `'send_message'`
+* Each session belongs to exactly one user.
+* Any activity type counts as valid activity.
+
+#### 🎯 Task
+
+Find the **daily active user count** for a period of **30 days ending 2019-07-27 (inclusive)**.
+
+A user is considered **active** on a day if they made **at least one activity** on that day.
+
+Return the result in any order.
+
+***
+
+### ✅ Solution
 
 ```
+SELECT 
+    activity_date AS day,
+    COUNT(DISTINCT user_id) AS active_users
+FROM Activity
+WHERE activity_date BETWEEN '2019-06-28' AND '2019-07-27'
+GROUP BY activity_date;
 ```
 
 ***
