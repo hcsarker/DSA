@@ -1,4 +1,8 @@
-# SQL Practice Notes – LeetCode Patterns
+---
+description: – LeetCode Patterns
+---
+
+# SQL Practice Notes
 
 ## 1️⃣&#x20;
 
