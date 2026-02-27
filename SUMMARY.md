@@ -2,6 +2,7 @@
 
 * [Solved DSA Codes](README.md)
 
-## Leetcode&#x20;
+## Leetcode
 
-* [Page 1](leetcode/page-1.md)
+* [Top Interview 150 Problem](leetcode/page-1.md)
+* [SQL Practice Notes – LeetCode Patterns](leetcode/sql-practice-notes-leetcode-patterns.md)
