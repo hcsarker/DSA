@@ -210,3 +210,139 @@ def twoSum(nums, target):
 * Time: O(n), Space: O(n)
 
 ***
+
+### 10. Duplicate Number in Array (Floyd’s Cycle Detection)
+
+**Problem:**\
+Given an array of `n + 1` integers where each integer is in range `[1, n]`. There is only **one repeated number**. Find it **without modifying the array** and using **constant extra space**.
+
+**Example:**
+
+```
+Input: nums = [1,3,4,2,2]
+Output: 2
+```
+
+**Solution:**\
+Use **Floyd’s Tortoise and Hare (Cycle Detection)** algorithm.
+
+**Python Code:**
+
+```
+def findDuplicate(nums):
+    # Phase 1: Detect cycle
+    slow = nums[0]
+    fast = nums[0]
+    while True:
+        slow = nums[slow]
+        fast = nums[nums[fast]]
+        if slow == fast:
+            break
+
+    # Phase 2: Find entrance of cycle
+    slow = nums[0]
+    while slow != fast:
+        slow = nums[slow]
+        fast = nums[fast]
+
+    return slow
+```
+
+**Concept:**
+
+* Treat array as a linked list: `index → nums[index]`
+* There is always a cycle because `n + 1` numbers map to `[1, n]`
+* Cycle start = duplicate number
+
+**Complexity:**
+
+* Time: O(n)
+* Space: O(1)
+
+***
+
+### 11. Remove Element from Array (In-Place)
+
+**Problem:**\
+Given `nums` and `val`, remove all occurrences of `val` in-place. Return `k`, the number of elements not equal to `val`. The first `k` elements should contain non-val elements.
+
+**Example:**
+
+```
+Input: nums = [3,2,2,3], val = 3
+Output: 2, nums = [2,2,_,_]
+```
+
+**Solution (Two Pointer):**
+
+```
+def removeElement(nums, val):
+    k = 0
+    for i in range(len(nums)):
+        if nums[i] != val:
+            nums[k] = nums[i]
+            k += 1
+    return k
+```
+
+**Alternate (Order Not Important):**
+
+```
+def removeElement(nums, val):
+    left = 0
+    right = len(nums) - 1
+    while left <= right:
+        if nums[left] == val:
+            nums[left] = nums[right]
+            right -= 1
+        else:
+            left += 1
+    return left
+```
+
+**Complexity:**
+
+* Time: O(n)
+* Space: O(1)
+
+***
+
+### 12. Coin Change Problem (Dynamic Programming)
+
+**Problem:**\
+Given `coins` of different denominations and `amount`, return the **fewest number of coins** needed to make that amount. Return -1 if impossible.
+
+**Example:**
+
+```
+Input: coins = [1,2,5], amount = 11
+Output: 3
+Explanation: 11 = 5 + 5 + 1
+```
+
+**Solution (Bottom-Up DP):**
+
+```
+def coinChange(coins, amount):
+    dp = [float('inf')] * (amount + 1)
+    dp[0] = 0
+    
+    for i in range(1, amount + 1):
+        for coin in coins:
+            if i - coin >= 0:
+                dp[i] = min(dp[i], dp[i - coin] + 1)
+    
+    return dp[amount] if dp[amount] != float('inf') else -1
+```
+
+**Concept:**
+
+* `dp[i]` = minimum coins to make amount `i`
+* Formula: `dp[i] = min(dp[i], dp[i - coin] + 1)`
+
+**Complexity:**
+
+* Time: O(amount × number\_of\_coins)
+* Space: O(amount)
+
+***
