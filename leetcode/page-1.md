@@ -347,7 +347,7 @@ def coinChange(coins, amount):
 
 ***
 
-## 13. Best Time to Buy and Sell Stock III
+### 13. Best Time to Buy and Sell Stock III
 
 ### 🔹 Problem Summary
 
