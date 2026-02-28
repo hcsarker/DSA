@@ -346,3 +346,105 @@ def coinChange(coins, amount):
 * Space: O(amount)
 
 ***
+
+## 13. Best Time to Buy and Sell Stock III
+
+### 🔹 Problem Summary
+
+তোমাকে একটি array `prices` দেওয়া আছে যেখানে:
+
+```
+prices[i] = i-th দিনের stock price
+```
+
+তুমি সর্বোচ্চ **২টা transaction (buy + sell)** করতে পারবে।
+
+⚠️ শর্ত:
+
+* একসাথে multiple transaction করা যাবে না
+* আগে sell করতে হবে, তারপর আবার buy করা যাবে
+
+***
+
+### 🎯 Goal
+
+Maximum profit বের করতে হবে।
+
+***
+
+## 🧠 Optimal Idea (4 State Method)
+
+আমরা ৪টা variable ব্যবহার করবো:
+
+| Variable | Meaning                               |
+| -------- | ------------------------------------- |
+| `buy1`   | প্রথমবার buy করলে minimum দাম         |
+| `sell1`  | প্রথমবার sell করলে max profit         |
+| `buy2`   | দ্বিতীয়বার buy করলে effective cost    |
+| `sell2`  | দ্বিতীয়বার sell করলে max total profit |
+
+***
+
+### 🔁 Transition Logic
+
+প্রতিটা price এর জন্য:
+
+```
+buy1  = min(buy1, price)
+sell1 = max(sell1, price - buy1)
+
+buy2  = min(buy2, price - sell1)
+sell2 = max(sell2, price - buy2)
+```
+
+👉 Final Answer = `sell2`
+
+***
+
+## 💻 LeetCode Code
+
+```
+    def maxProfit(self, prices):
+        """
+        :type prices: List[int]
+        :rtype: int
+        """
+        
+        buy1 = float('inf')
+        sell1 = 0
+        buy2 = float('inf')
+        sell2 = 0
+        
+        for price in prices:
+            buy1 = min(buy1, price)
+            sell1 = max(sell1, price - buy1)
+            
+            buy2 = min(buy2, price - sell1)
+            sell2 = max(sell2, price - buy2)
+        
+        return sell2
+```
+
+***
+
+## 🔎 Example
+
+```
+Input:  [3,3,5,0,0,3,1,4]
+Output: 6
+```
+
+Best Strategy:
+
+```
+Buy at 0 → Sell at 3 = 3
+Buy at 1 → Sell at 4 = 3
+Total Profit = 6
+```
+
+***
+
+## ⏱ Complexity
+
+* Time Complexity → O(n)
+* Space Complexity → O(1)
