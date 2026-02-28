@@ -4,9 +4,79 @@ description: – LeetCode Patterns
 
 # SQL Practice Notes
 
-## 1️⃣&#x20;
+## 1️⃣  Students and Examinations
 
+### 📝 Question
 
+#### **Table: Students**
+
+| Column Name   | Type    |
+| ------------- | ------- |
+| student\_id   | int     |
+| student\_name | varchar |
+
+* `student_id` is the primary key.
+
+***
+
+#### **Table: Subjects**
+
+| Column Name   | Type    |
+| ------------- | ------- |
+| subject\_name | varchar |
+
+* `subject_name` is the primary key.
+
+***
+
+#### **Table: Examinations**
+
+| Column Name   | Type    |
+| ------------- | ------- |
+| student\_id   | int     |
+| subject\_name | varchar |
+
+* No primary key.
+* May contain duplicates.
+* Each student takes **every subject**.
+* Each row means a student attended that subject exam once.
+
+***
+
+### 🎯 Task
+
+Find the **number of times each student attended each exam**.
+
+Return result ordered by:
+
+```
+student_id ASC,
+subject_name ASC
+```
+
+***
+
+## ✅ Solution
+
+```
+SELECT 
+    s.student_id,
+    s.student_name,
+    sub.subject_name,
+    COUNT(e.subject_name) AS attended_exams
+FROM Students s
+CROSS JOIN Subjects sub
+LEFT JOIN Examinations e 
+    ON s.student_id = e.student_id
+    AND sub.subject_name = e.subject_name
+GROUP BY 
+    s.student_id, 
+    s.student_name, 
+    sub.subject_name
+ORDER BY 
+    s.student_id, 
+    sub.subject_name;
+```
 
 ***
 
