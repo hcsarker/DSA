@@ -282,14 +282,63 @@ GROUP BY activity_date;
 
 ***
 
-## 📌 Master SQL Patterns List
+### 11. Customers Who Bought All Products
 
-| Pattern               | Use Case                  |
-| --------------------- | ------------------------- |
-| LEFT JOIN             | Keep all left rows        |
-| SELF JOIN             | Compare within same table |
-| GROUP BY              | Aggregation               |
-| HAVING                | Filter aggregated data    |
-| COUNT(DISTINCT)       | Unique count              |
-| ORDER BY DESC LIMIT 1 | Top value                 |
-| CASE WHEN             | Conditional aggregation   |
+### 🧠 Pattern: Relational Division
+
+***
+
+### 📝 Problem Statement
+
+#### 🔹 Table: Customer
+
+| Column Name  | Type |
+| ------------ | ---- |
+| customer\_id | int  |
+| product\_key | int  |
+
+* May contain duplicate rows
+* `product_key` is a foreign key referencing `Product` table
+
+***
+
+#### 🔹 Table: Product
+
+| Column Name  | Type |
+| ------------ | ---- |
+| product\_key | int  |
+
+* `product_key` is the primary key
+* Contains all available products
+
+***
+
+### 🎯 Objective
+
+Find the `customer_id` who bought **all the products** available in the `Product` table.
+
+Return result in any order.
+
+***
+
+## 🧠 Core Idea
+
+If a customer bought **all products**, then:
+
+```
+Number of distinct products bought by customer
+=
+Total number of products in Product table
+```
+
+***
+
+## ✅ SQL Solution
+
+```
+SELECT customer_id
+FROM Customer
+GROUP BY customer_id
+HAVING COUNT(DISTINCT product_key) =
+(SELECT COUNT(*) FROM Product);
+```
