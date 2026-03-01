@@ -366,25 +366,6 @@ prices[i] = i-th দিনের stock price
 
 ***
 
-### 🎯 Goal
-
-Maximum profit বের করতে হবে।
-
-***
-
-## 🧠 Optimal Idea (4 State Method)
-
-আমরা ৪টা variable ব্যবহার করবো:
-
-| Variable | Meaning                               |
-| -------- | ------------------------------------- |
-| `buy1`   | প্রথমবার buy করলে minimum দাম         |
-| `sell1`  | প্রথমবার sell করলে max profit         |
-| `buy2`   | দ্বিতীয়বার buy করলে effective cost    |
-| `sell2`  | দ্বিতীয়বার sell করলে max total profit |
-
-***
-
 ### 🔁 Transition Logic
 
 প্রতিটা price এর জন্য:
@@ -401,14 +382,10 @@ sell2 = max(sell2, price - buy2)
 
 ***
 
-## 💻 LeetCode Code
+### 💻 LeetCode Code
 
 ```
     def maxProfit(self, prices):
-        """
-        :type prices: List[int]
-        :rtype: int
-        """
         
         buy1 = float('inf')
         sell1 = 0
@@ -427,7 +404,7 @@ sell2 = max(sell2, price - buy2)
 
 ***
 
-## 🔎 Example
+### 🔎 Example
 
 ```
 Input:  [3,3,5,0,0,3,1,4]
@@ -444,7 +421,154 @@ Total Profit = 6
 
 ***
 
-## ⏱ Complexity
+### ⏱ Complexity
 
 * Time Complexity → O(n)
 * Space Complexity → O(1)
+
+### 14. LeetCode 188
+
+### 🟢 Best Time to Buy and Sell Stock IV
+
+***
+
+### 🔥 Problem Summary
+
+তোমাকে দেওয়া আছে:
+
+* `prices[i]` = i তম দিনের stock price
+* `k` = সর্বোচ্চ কয়টা transaction করতে পারবে
+
+👉 তুমি সর্বোচ্চ `k` বার buy + sell করতে পারবে\
+👉 একসাথে একাধিক transaction করা যাবে না
+
+***
+
+### 🧠 Key Idea
+
+১টা transaction করতে লাগে:
+
+* ১ দিন buy
+* ১ দিন sell
+
+অর্থাৎ কমপক্ষে ২ দিন লাগে।
+
+তাই,
+
+```
+Maximum possible transaction = n // 2
+```
+
+***
+
+### 🔥 Important Optimization
+
+#### যদি
+
+```
+k >= n // 2
+```
+
+তাহলে এটা Unlimited Transaction problem হয়ে যায়\
+(LeetCode 122 এর মতো)
+
+তখন Greedy ব্যবহার করবো:
+
+```
+profit = 0
+for i in range(1, n):
+    if prices[i] > prices[i-1]:
+        profit += prices[i] - prices[i-1]
+```
+
+***
+
+### 🟢 DP Solution (General Case)
+
+আমরা দুইটা array ব্যবহার করি:
+
+```
+buy[i]  = i তম transaction পর্যন্ত কিনে থাকলে max profit
+sell[i] = i তম transaction পর্যন্ত বিক্রি করলে max profit
+```
+
+***
+
+### 🔥 Transition Formula
+
+```
+buy[i] = max(buy[i], sell[i-1] - price)
+sell[i] = max(sell[i], buy[i] + price)
+```
+
+***
+
+### 🧠 এই দুইটা লাইনের মানে
+
+#### 🟢 buy\[i]
+
+দুইটা অপশন:
+
+1. আগের মতো hold করি
+2. এখন নতুন করে কিনি
+
+```
+sell[i-1] - price
+```
+
+কারণ:\
+আগের transaction শেষ করা থাকতে হবে
+
+***
+
+#### 🟢 sell\[i]
+
+দুইটা অপশন:
+
+1. আগের মতো থাকি
+2. আজ বিক্রি করি
+
+```
+buy[i] + price
+```
+
+কারণ:\
+আগে কিনে থাকতে হবে
+
+***
+
+### 💻 Full Code
+
+```
+class Solution(object):
+    def maxProfit(self, k, prices):
+        if not prices:
+            return 0
+        
+        n = len(prices)
+        
+        # Unlimited transaction case
+        if k >= n // 2:
+            profit = 0
+            for i in range(1, n):
+                if prices[i] > prices[i-1]:
+                    profit += prices[i] - prices[i-1]
+            return profit
+        
+        buy = [-float('inf')] * (k + 1)
+        sell = [0] * (k + 1)
+        
+        for price in prices:
+            for i in range(1, k + 1):
+                buy[i] = max(buy[i], sell[i-1] - price)
+                sell[i] = max(sell[i], buy[i] + price)
+        
+        return sell[k]
+```
+
+***
+
+#### 📊 Time & Space Complexity
+
+Time Complexity = O(n \* k)\
+Space Complexity = O(k)
