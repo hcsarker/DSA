@@ -572,3 +572,82 @@ class Solution(object):
 
 Time Complexity = O(n \* k)\
 Space Complexity = O(k)
+
+## 15. LeetCode 26
+
+### 🟢 Remove Duplicates from Sorted Array
+
+***
+
+### 🔥 Problem Summary
+
+তোমাকে একটি **sorted array `nums`** দেওয়া আছে।
+
+তোমার কাজ:
+
+* Duplicate remove করতে হবে
+* In-place করতে হবে (extra array ব্যবহার করা যাবে না)
+* Unique element গুলা প্রথমে রাখতে হবে
+* শেষে return করতে হবে `k` = unique element এর সংখ্যা
+
+***
+
+### 🧠 Key Observation
+
+* Array already **sorted**
+* তাই duplicate গুলো পাশাপাশি থাকবে
+
+Example:
+
+```
+[1,1,2,2,3,4,4]
+```
+
+***
+
+### 🟢 Approach → Two Pointer Technique
+
+আমরা দুইটা pointer ব্যবহার করবো:
+
+```
+slow → unique position রাখবে
+fast → সামনে ঘুরবে
+```
+
+***
+
+### 🔥 Core Idea
+
+* `slow = 0`
+* `fast` 1 থেকে শুরু করবে
+* যদি `nums[fast] != nums[slow]`
+  * তাহলে নতুন unique number পাওয়া গেছে
+  * `slow += 1`
+  * `nums[slow] = nums[fast]`
+
+***
+
+### 💻 Code (Python)
+
+```
+class Solution(object):
+    def removeDuplicates(self, nums):
+        if not nums:
+            return 0
+        
+        slow = 0
+        
+        for fast in range(1, len(nums)):
+            if nums[fast] != nums[slow]:
+                slow += 1
+                nums[slow] = nums[fast]
+        
+        return slow + 1
+```
+
+***
+
+### ⏱ Complexity
+
+Time = O(n)\
+Space = O(1)
