@@ -343,7 +343,7 @@ HAVING COUNT(DISTINCT product_key) =
 (SELECT COUNT(*) FROM Product);
 ```
 
-## 📘11. Tree Node Classification
+## 12. Tree Node Classification
 
 ### 🏷 Difficulty: Medium
 
@@ -380,7 +380,7 @@ Return result in any order.
 
 ***
 
-## 🧠 Core Logic
+### 🧠 Core Logic
 
 #### 1️⃣ Root Node
 
@@ -512,3 +512,121 @@ LEFT JOIN Tree c
 
 ***
 
+## 13. Movie Rating Analysis
+
+### 🏷 Difficulty: Medium
+
+### 🧠 Pattern: Aggregation + Tie Breaking + Date Filtering
+
+***
+
+### 📝 Problem Statement
+
+#### 🔹 Table: Movies
+
+| Column Name | Type    |
+| ----------- | ------- |
+| movie\_id   | int     |
+| title       | varchar |
+
+* `movie_id` is primary key
+* Each movie has a unique title
+
+***
+
+#### 🔹 Table: Users
+
+| Column Name | Type    |
+| ----------- | ------- |
+| user\_id    | int     |
+| name        | varchar |
+
+* `user_id` is primary key
+* `name` is unique
+
+***
+
+#### 🔹 Table: MovieRating
+
+| Column Name | Type |
+| ----------- | ---- |
+| movie\_id   | int  |
+| user\_id    | int  |
+| rating      | int  |
+| created\_at | date |
+
+* `(movie_id, user_id)` is primary key
+* Contains user ratings
+* `created_at` = review date
+
+***
+
+### 🎯 Objective
+
+#### 1️⃣ Find the user who rated the greatest number of movies
+
+* If tie → return lexicographically smaller name
+
+#### 2️⃣ Find the movie with the highest average rating in **February 2020**
+
+* If tie → return lexicographically smaller title
+
+***
+
+### 🔥 Combined Final Answer (Single Output Format)
+
+```
+(
+SELECT u.name AS results
+FROM MovieRating mr
+JOIN Users u ON mr.user_id = u.user_id
+GROUP BY mr.user_id, u.name
+ORDER BY COUNT(*) DESC, u.name ASC
+LIMIT 1
+)
+
+UNION ALL
+
+(
+SELECT m.title AS results
+FROM MovieRating mr
+JOIN Movies m ON mr.movie_id = m.movie_id
+WHERE mr.created_at BETWEEN '2020-02-01' AND '2020-02-29'
+GROUP BY mr.movie_id, m.title
+ORDER BY AVG(mr.rating) DESC, m.title ASC
+LIMIT 1
+);
+```
+
+***
+
+### 🎯 Interview Pattern Recognition
+
+If question says:
+
+* “Greatest number of”
+* “Highest average”
+* “In case of tie”
+* “Specific month filter”
+
+👉 Think:
+
+```
+GROUP BY
+ORDER BY aggregate DESC
+ORDER BY name ASC (tie breaker)
+LIMIT 1
+```
+
+***
+
+### 📌 Concepts Used
+
+* JOIN
+* GROUP BY
+* COUNT()
+* AVG()
+* ORDER BY
+* LIMIT
+* BETWEEN (Date filtering)
+* UNION ALL
