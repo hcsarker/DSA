@@ -321,7 +321,7 @@ Return result in any order.
 
 ***
 
-## 🧠 Core Idea
+### 🧠 Core Idea
 
 If a customer bought **all products**, then:
 
@@ -333,7 +333,7 @@ Total number of products in Product table
 
 ***
 
-## ✅ SQL Solution
+### ✅ SQL Solution
 
 ```
 SELECT customer_id
@@ -342,3 +342,173 @@ GROUP BY customer_id
 HAVING COUNT(DISTINCT product_key) =
 (SELECT COUNT(*) FROM Product);
 ```
+
+## 📘11. Tree Node Classification
+
+### 🏷 Difficulty: Medium
+
+### 🧠 Pattern: Self Relationship / Hierarchical Classification
+
+***
+
+### 📝 Problem Statement
+
+#### 🔹 Table: Tree
+
+| Column Name | Type |
+| ----------- | ---- |
+| id          | int  |
+| p\_id       | int  |
+
+* `id` is unique (Primary Key)
+* `p_id` = parent id
+* Structure is always a valid tree
+
+***
+
+### 🎯 Objective
+
+Classify each node into one of three types:
+
+| Type  | Condition                        |
+| ----- | -------------------------------- |
+| Root  | `p_id IS NULL`                   |
+| Leaf  | Node has no children             |
+| Inner | Node has parent AND has children |
+
+Return result in any order.
+
+***
+
+## 🧠 Core Logic
+
+#### 1️⃣ Root Node
+
+If:
+
+```
+p_id IS NULL
+```
+
+***
+
+#### 2️⃣ Leaf Node
+
+If:
+
+* Node does NOT appear as any `p_id` in table
+
+***
+
+#### 3️⃣ Inner Node
+
+If:
+
+* Not Root
+* AND appears as parent of someone
+
+***
+
+### ✅ SQL Solution
+
+```
+SELECT 
+    id,
+    CASE
+        WHEN p_id IS NULL THEN 'Root'
+        WHEN id NOT IN (SELECT DISTINCT p_id FROM Tree WHERE p_id IS NOT NULL) THEN 'Leaf'
+        ELSE 'Inner'
+    END AS type
+FROM Tree;
+```
+
+***
+
+### 🔍 Step-by-Step Explanation
+
+#### 🔹 Root Check
+
+```
+p_id IS NULL
+```
+
+Root node has no parent.
+
+***
+
+#### 🔹 Leaf Check
+
+```
+id NOT IN (SELECT p_id FROM Tree)
+```
+
+If a node never appears as a parent → it has no children → Leaf.
+
+***
+
+#### 🔹 Otherwise → Inner
+
+If it has a parent AND has children → Inner node.
+
+***
+
+### 📊 Example
+
+#### Input
+
+| id | p\_id |
+| -- | ----- |
+| 1  | NULL  |
+| 2  | 1     |
+| 3  | 1     |
+| 4  | 2     |
+
+#### Output
+
+| id | type  |
+| -- | ----- |
+| 1  | Root  |
+| 2  | Inner |
+| 3  | Leaf  |
+| 4  | Leaf  |
+
+***
+
+### 🎯 Interview Pattern Recognition
+
+If question involves:
+
+* Parent-child relationship
+* Self-referencing table
+* Hierarchy classification
+
+👉 Think:
+
+```
+Self condition + Subquery check
+```
+
+***
+
+### 🔥 Alternative (Using LEFT JOIN)
+
+```
+SELECT 
+    t.id,
+    CASE
+        WHEN t.p_id IS NULL THEN 'Root'
+        WHEN c.id IS NULL THEN 'Leaf'
+        ELSE 'Inner'
+    END AS type
+FROM Tree t
+LEFT JOIN Tree c
+    ON t.id = c.p_id;
+```
+
+🧠 Here:
+
+* If no child exists → `c.id IS NULL` → Leaf
+* If parent NULL → Root
+
+***
+
