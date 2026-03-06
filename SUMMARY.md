@@ -9,6 +9,7 @@
 * [SQL Practice Notes](leetcode/sql-practice-notes/README.md)
   * [📘 Trips and Cancellation Rate](leetcode/sql-practice-notes/trips-and-cancellation-rate.md)
   * [📘 Consecutive Numbers](leetcode/sql-practice-notes/consecutive-numbers.md)
+  * [📘 Rank Scores](leetcode/sql-practice-notes/rank-scores.md)
 
 ## Contest
 
