@@ -11,6 +11,7 @@
   * [📘 Trips and Cancellation Rate](leetcode/sql-practice-notes/trips-and-cancellation-rate.md)
   * [📘 Consecutive Numbers](leetcode/sql-practice-notes/consecutive-numbers.md)
   * [📘 Rank Scores](leetcode/sql-practice-notes/rank-scores.md)
+  * [📘 Investments in 2016](leetcode/sql-practice-notes/investments-in-2016.md)
 
 ## Contest
 
