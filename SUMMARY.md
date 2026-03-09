@@ -13,6 +13,7 @@
   * [📘 Consecutive Numbers](leetcode/sql-practice-notes/consecutive-numbers.md)
   * [📘 Rank Scores](leetcode/sql-practice-notes/rank-scores.md)
   * [📘 Investments in 2016](leetcode/sql-practice-notes/investments-in-2016.md)
+  * [📘 Department Highest Salary](leetcode/sql-practice-notes/department-highest-salary.md)
 
 ## Contest
 
