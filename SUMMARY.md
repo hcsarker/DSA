@@ -15,6 +15,7 @@
   * [📘 Investments in 2016](leetcode/sql-practice-notes/investments-in-2016.md)
   * [📘 Department Highest Salary](leetcode/sql-practice-notes/department-highest-salary.md)
   * [📘 Product Sales Analysis III](leetcode/sql-practice-notes/product-sales-analysis-iii.md)
+  * [📘 Human Traffic of Stadium](leetcode/sql-practice-notes/human-traffic-of-stadium.md)
 
 ## Contest
 
