@@ -9,6 +9,7 @@
   * [📘 LeetCode 189 – Rotate Array](leetcode/page-1/leetcode-189-rotate-array.md)
   * [📘 Length of Last Word](leetcode/page-1/length-of-last-word.md)
   * [📘 LeetCode 55](leetcode/page-1/leetcode-55.md)
+  * [📘 LeetCode 45](leetcode/page-1/leetcode-45.md)
 * [SQL Practice Notes](leetcode/sql-practice-notes/README.md)
   * [📘 Trips and Cancellation Rate](leetcode/sql-practice-notes/trips-and-cancellation-rate.md)
   * [📘 Consecutive Numbers](leetcode/sql-practice-notes/consecutive-numbers.md)
