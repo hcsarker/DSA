@@ -17,6 +17,7 @@
   * [📘 Department Highest Salary](leetcode/sql-practice-notes/department-highest-salary.md)
   * [📘 Product Sales Analysis III](leetcode/sql-practice-notes/product-sales-analysis-iii.md)
   * [📘 Human Traffic of Stadium](leetcode/sql-practice-notes/human-traffic-of-stadium.md)
+  * [1757. Recyclable and Low Fat Products](leetcode/sql-practice-notes/1757.-recyclable-and-low-fat-products.md)
 
 ## Contest
 
