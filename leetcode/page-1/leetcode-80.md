@@ -1,8 +1,8 @@
 ---
-description: 📘 LeetCode 80
+description: 📘Remove Duplicates from Sorted Array II
 ---
 
-# Remove Duplicates from Sorted Array II
+# 📘LeetCode 80
 
 ***
 
