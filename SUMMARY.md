@@ -21,6 +21,7 @@
   * [📘Recyclable and Low Fat Products](leetcode/sql-practice-notes/recyclable-and-low-fat-products.md)
   * [📘Big Countries](leetcode/sql-practice-notes/big-countries.md)
   * [📘Article Views I](leetcode/sql-practice-notes/article-views-i.md)
+  * [📘 Invalid Tweets](leetcode/sql-practice-notes/invalid-tweets.md)
 
 ## Contest
 
