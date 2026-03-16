@@ -11,6 +11,7 @@
   * [📘 LeetCode 55](leetcode/page-1/leetcode-55.md)
   * [📘 LeetCode 45](leetcode/page-1/leetcode-45.md)
   * [📘 LeetCode 274](leetcode/page-1/leetcode-274.md)
+  * [📘 LeetCode 380 – Insert Delete GetRandom O(1)](leetcode/page-1/leetcode-380-insert-delete-getrandom-o-1.md)
 * [SQL Practice Notes](leetcode/sql-practice-notes/README.md)
   * [📘 Trips and Cancellation Rate](leetcode/sql-practice-notes/trips-and-cancellation-rate.md)
   * [📘 Consecutive Numbers](leetcode/sql-practice-notes/consecutive-numbers.md)
