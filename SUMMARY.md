@@ -24,6 +24,7 @@
   * [📘Article Views I](leetcode/sql-practice-notes/article-views-i.md)
   * [📘 Invalid Tweets](leetcode/sql-practice-notes/invalid-tweets.md)
   * [📘Replace Employee ID With The Unique Identifier](leetcode/sql-practice-notes/replace-employee-id-with-the-unique-identifier.md)
+  * [1068. Product Sales Analysis I](leetcode/sql-practice-notes/1068.-product-sales-analysis-i.md)
 
 ## Contest
 
