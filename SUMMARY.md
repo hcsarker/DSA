@@ -22,7 +22,9 @@
   * [📘Big Countries](leetcode/sql-practice-notes/big-countries.md)
   * [📘Article Views I](leetcode/sql-practice-notes/article-views-i.md)
   * [📘 Invalid Tweets](leetcode/sql-practice-notes/invalid-tweets.md)
+  * [📘Replace Employee ID With The Unique Identifier](leetcode/sql-practice-notes/replace-employee-id-with-the-unique-identifier.md)
 
 ## Contest
 
+* [Weekly Contest](contest/weekly-contest.md)
 * [Python Contest Cheat Sheet](contest/python-contest-cheat-sheet.md)
