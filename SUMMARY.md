@@ -26,6 +26,8 @@
   * [📘 Invalid Tweets](leetcode/sql-practice-notes/invalid-tweets.md)
   * [📘Replace Employee ID With The Unique Identifier](leetcode/sql-practice-notes/replace-employee-id-with-the-unique-identifier.md)
   * [1068. Product Sales Analysis I](leetcode/sql-practice-notes/1068.-product-sales-analysis-i.md)
+  * [1581. Customer Who Visited but Did Not Make Any Transactions](leetcode/sql-practice-notes/1581.-customer-who-visited-but-did-not-make-any-transactions.md)
+  * [197. Rising Temperature](leetcode/sql-practice-notes/197.-rising-temperature.md)
 
 ## Contest
 
