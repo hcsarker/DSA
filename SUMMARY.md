@@ -29,6 +29,7 @@
   * [1581. Customer Who Visited but Did Not Make Any Transactions](leetcode/sql-practice-notes/1581.-customer-who-visited-but-did-not-make-any-transactions.md)
   * [197. Rising Temperature](leetcode/sql-practice-notes/197.-rising-temperature.md)
   * [1661. Average Time of Process per Machine](leetcode/sql-practice-notes/1661.-average-time-of-process-per-machine.md)
+  * [577. Employee Bonus](leetcode/sql-practice-notes/577.-employee-bonus.md)
 
 ## Contest
 
