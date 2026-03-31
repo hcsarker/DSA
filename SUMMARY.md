@@ -31,6 +31,7 @@
   * [197. Rising Temperature](leetcode/sql-practice-notes/197.-rising-temperature.md)
   * [1661. Average Time of Process per Machine](leetcode/sql-practice-notes/1661.-average-time-of-process-per-machine.md)
   * [577. Employee Bonus](leetcode/sql-practice-notes/577.-employee-bonus.md)
+  * [570. Managers with at Least 5 Direct Reports](leetcode/sql-practice-notes/570.-managers-with-at-least-5-direct-reports.md)
 
 ## Contest
 
