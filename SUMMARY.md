@@ -33,6 +33,7 @@
   * [577. Employee Bonus](leetcode/sql-practice-notes/577.-employee-bonus.md)
   * [570. Managers with at Least 5 Direct Reports](leetcode/sql-practice-notes/570.-managers-with-at-least-5-direct-reports.md)
   * [1934. Confirmation Rate](leetcode/sql-practice-notes/1934.-confirmation-rate.md)
+  * [1251. Average Selling Price](leetcode/sql-practice-notes/1251.-average-selling-price.md)
 
 ## Contest
 
