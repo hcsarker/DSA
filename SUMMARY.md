@@ -13,6 +13,7 @@
   * [📘 LeetCode 274](leetcode/page-1/leetcode-274.md)
   * [📘 LeetCode 380 – Insert Delete GetRandom O(1)](leetcode/page-1/leetcode-380-insert-delete-getrandom-o-1.md)
   * [📘 LeetCode 381 Insert Delete GetRandom O(1) (Duplicates Allowed)](leetcode/page-1/leetcode-381-insert-delete-getrandom-o-1-duplicates-allowed.md)
+  * [📘 LeetCode 134 Gas Station](leetcode/page-1/leetcode-134-gas-station.md)
 * [SQL Practice Notes](leetcode/sql-practice-notes/README.md)
   * [📘 Trips and Cancellation Rate](leetcode/sql-practice-notes/trips-and-cancellation-rate.md)
   * [📘 Consecutive Numbers](leetcode/sql-practice-notes/consecutive-numbers.md)
@@ -34,6 +35,7 @@
   * [570. Managers with at Least 5 Direct Reports](leetcode/sql-practice-notes/570.-managers-with-at-least-5-direct-reports.md)
   * [1934. Confirmation Rate](leetcode/sql-practice-notes/1934.-confirmation-rate.md)
   * [1251. Average Selling Price](leetcode/sql-practice-notes/1251.-average-selling-price.md)
+  * [1075. Project Employees I](leetcode/sql-practice-notes/1075.-project-employees-i.md)
 
 ## Contest
 
