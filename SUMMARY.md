@@ -15,6 +15,7 @@
   * [📘 LeetCode 381 Insert Delete GetRandom O(1) (Duplicates Allowed)](leetcode/page-1/leetcode-381-insert-delete-getrandom-o-1-duplicates-allowed.md)
   * [📘 LeetCode 134 Gas Station](leetcode/page-1/leetcode-134-gas-station.md)
   * [📘 LeetCode 135 Candy](leetcode/page-1/leetcode-135-candy.md)
+  * [📘 LeetCode 42 Trapping Rain Water](leetcode/page-1/leetcode-42-trapping-rain-water.md)
 * [SQL Practice Notes](leetcode/sql-practice-notes/README.md)
   * [📘 Trips and Cancellation Rate](leetcode/sql-practice-notes/trips-and-cancellation-rate.md)
   * [📘 Consecutive Numbers](leetcode/sql-practice-notes/consecutive-numbers.md)
@@ -39,6 +40,7 @@
   * [1075. Project Employees I](leetcode/sql-practice-notes/1075.-project-employees-i.md)
   * [1633. Percentage of Users Attended a Contest](leetcode/sql-practice-notes/1633.-percentage-of-users-attended-a-contest.md)
   * [1211. Queries Quality and Percentage](leetcode/sql-practice-notes/1211.-queries-quality-and-percentage.md)
+  * [1174. Immediate Food Delivery II](leetcode/sql-practice-notes/1174.-immediate-food-delivery-ii.md)
 
 ## Contest
 
