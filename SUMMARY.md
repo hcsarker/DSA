@@ -41,6 +41,7 @@
   * [1633. Percentage of Users Attended a Contest](leetcode/sql-practice-notes/1633.-percentage-of-users-attended-a-contest.md)
   * [1211. Queries Quality and Percentage](leetcode/sql-practice-notes/1211.-queries-quality-and-percentage.md)
   * [1174. Immediate Food Delivery II](leetcode/sql-practice-notes/1174.-immediate-food-delivery-ii.md)
+  * [550. Game Play Analysis IV](leetcode/sql-practice-notes/550.-game-play-analysis-iv.md)
 
 ## Contest
 
