@@ -44,6 +44,7 @@
   * [1174. Immediate Food Delivery II](leetcode/sql-practice-notes/1174.-immediate-food-delivery-ii.md)
   * [550. Game Play Analysis IV](leetcode/sql-practice-notes/550.-game-play-analysis-iv.md)
   * [2356. Number of Unique Subjects Taught by Each Teacher](leetcode/sql-practice-notes/2356.-number-of-unique-subjects-taught-by-each-teacher.md)
+  * [1729. Find Followers Count](leetcode/sql-practice-notes/1729.-find-followers-count.md)
 
 ## Contest
 
