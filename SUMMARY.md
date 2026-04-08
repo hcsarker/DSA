@@ -17,6 +17,7 @@
   * [📘 LeetCode 135 Candy](leetcode/page-1/leetcode-135-candy.md)
   * [📘 LeetCode 42 Trapping Rain Water](leetcode/page-1/leetcode-42-trapping-rain-water.md)
   * [📘 LeetCode 12 Integer to Roman](leetcode/page-1/leetcode-12-integer-to-roman.md)
+  * [📘 LeetCode 151  Reverse Words in a String](leetcode/page-1/leetcode-151-reverse-words-in-a-string.md)
 * [SQL Practice Notes](leetcode/sql-practice-notes/README.md)
   * [📘 Trips and Cancellation Rate](leetcode/sql-practice-notes/trips-and-cancellation-rate.md)
   * [📘 Consecutive Numbers](leetcode/sql-practice-notes/consecutive-numbers.md)
@@ -45,6 +46,7 @@
   * [550. Game Play Analysis IV](leetcode/sql-practice-notes/550.-game-play-analysis-iv.md)
   * [2356. Number of Unique Subjects Taught by Each Teacher](leetcode/sql-practice-notes/2356.-number-of-unique-subjects-taught-by-each-teacher.md)
   * [1729. Find Followers Count](leetcode/sql-practice-notes/1729.-find-followers-count.md)
+  * [619. Biggest Single Number](leetcode/sql-practice-notes/619.-biggest-single-number.md)
 
 ## Contest
 
