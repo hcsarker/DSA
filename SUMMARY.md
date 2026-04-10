@@ -47,6 +47,7 @@
   * [2356. Number of Unique Subjects Taught by Each Teacher](leetcode/sql-practice-notes/2356.-number-of-unique-subjects-taught-by-each-teacher.md)
   * [1729. Find Followers Count](leetcode/sql-practice-notes/1729.-find-followers-count.md)
   * [619. Biggest Single Number](leetcode/sql-practice-notes/619.-biggest-single-number.md)
+  * [Page 1](leetcode/sql-practice-notes/page-1.md)
 
 ## Contest
 
