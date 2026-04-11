@@ -48,6 +48,7 @@
   * [1729. Find Followers Count](leetcode/sql-practice-notes/1729.-find-followers-count.md)
   * [619. Biggest Single Number](leetcode/sql-practice-notes/619.-biggest-single-number.md)
   * [1731. The Number of Employees Which Report to Each Employee](leetcode/sql-practice-notes/1731.-the-number-of-employees-which-report-to-each-employee.md)
+  * [1789. Primary Department for Each Employee](leetcode/sql-practice-notes/1789.-primary-department-for-each-employee.md)
 
 ## Contest
 
