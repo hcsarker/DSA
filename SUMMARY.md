@@ -19,6 +19,7 @@
   * [📘 LeetCode 12 Integer to Roman](leetcode/page-1/leetcode-12-integer-to-roman.md)
   * [📘 LeetCode 151  Reverse Words in a String](leetcode/page-1/leetcode-151-reverse-words-in-a-string.md)
   * [📘 LeetCode 6 Zigzag Conversion](leetcode/page-1/leetcode-6-zigzag-conversion.md)
+  * [📘 LeetCode 28 Find First Occurrence (strStr)](leetcode/page-1/leetcode-28-find-first-occurrence-strstr.md)
 * [SQL Practice Notes](leetcode/sql-practice-notes/README.md)
   * [📘 Trips and Cancellation Rate](leetcode/sql-practice-notes/trips-and-cancellation-rate.md)
   * [📘 Consecutive Numbers](leetcode/sql-practice-notes/consecutive-numbers.md)
