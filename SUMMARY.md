@@ -54,6 +54,7 @@
   * [1164. Product Price at a Given Date](leetcode/sql-practice-notes/1164.-product-price-at-a-given-date.md)
   * [610. Triangle Judgement](leetcode/sql-practice-notes/610.-triangle-judgement.md)
   * [1204. Last Person to Fit in the Bus](leetcode/sql-practice-notes/1204.-last-person-to-fit-in-the-bus.md)
+  * [1907. Count Salary Categories](leetcode/sql-practice-notes/1907.-count-salary-categories.md)
 
 ## Contest
 
