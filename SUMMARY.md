@@ -56,6 +56,7 @@
   * [1204. Last Person to Fit in the Bus](leetcode/sql-practice-notes/1204.-last-person-to-fit-in-the-bus.md)
   * [1907. Count Salary Categories](leetcode/sql-practice-notes/1907.-count-salary-categories.md)
   * [1978. Employees Whose Manager Left the Company](leetcode/sql-practice-notes/1978.-employees-whose-manager-left-the-company.md)
+  * [626. Exchange Seats](leetcode/sql-practice-notes/626.-exchange-seats.md)
 
 ## Contest
 
