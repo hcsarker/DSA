@@ -57,6 +57,7 @@
   * [1907. Count Salary Categories](leetcode/sql-practice-notes/1907.-count-salary-categories.md)
   * [1978. Employees Whose Manager Left the Company](leetcode/sql-practice-notes/1978.-employees-whose-manager-left-the-company.md)
   * [626. Exchange Seats](leetcode/sql-practice-notes/626.-exchange-seats.md)
+  * [1321. Restaurant Growth](leetcode/sql-practice-notes/1321.-restaurant-growth.md)
 
 ## Contest
 
