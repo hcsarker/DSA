@@ -60,6 +60,7 @@
   * [1321. Restaurant Growth](leetcode/sql-practice-notes/1321.-restaurant-growth.md)
   * [602. Friend Requests II: Who Has the Most Friends](leetcode/sql-practice-notes/602.-friend-requests-ii-who-has-the-most-friends.md)
   * [185. Department Top Three Salaries](leetcode/sql-practice-notes/185.-department-top-three-salaries.md)
+  * [1527. Patients With a Condition](leetcode/sql-practice-notes/1527.-patients-with-a-condition.md)
 
 ## Contest
 
