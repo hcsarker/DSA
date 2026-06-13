@@ -63,6 +63,7 @@
   * [185. Department Top Three Salaries](leetcode/sql-practice-notes/185.-department-top-three-salaries.md)
   * [1527. Patients With a Condition](leetcode/sql-practice-notes/1527.-patients-with-a-condition.md)
   * [196. Delete Duplicate Emails](leetcode/sql-practice-notes/196.-delete-duplicate-emails.md)
+  * [176. Second Highest Salary](leetcode/sql-practice-notes/176.-second-highest-salary.md)
 
 ## Contest
 
